@@ -14,6 +14,16 @@ using programming jargon, so I count on new coders to point out
 the gaps.
 
 
+## Introduction
+
+*I didn't write this yet. I want it to include:*
+
+ - how and why code is organized in files, classes, methods
+ - very brief overview of compiling and compiler errors (the
+   compiler is your friend, it wants to help you write correct
+   code)
+
+
 ## `class`
 
 *TODO: write this bit*
@@ -29,6 +39,8 @@ In the following code, `myValue` and `DoSomething` are *members* of
 ```csharp
 class MyClass {
 
+  static int ourValue;
+
   int myValue;
   
   void DoSomething () {
@@ -38,10 +50,30 @@ class MyClass {
 ```
 
 Some members belong to the *class* itself. These are called *static members*.
+In the above example, `ourValue` is a static member (because it has the `static`
+keyword in front of it).
+
 Some members belong to an *instance* of the class. These are called *instance members*.
+In the example above, `myValue` and `DoSomething` are instance members (because they
+do not have the `static` keyword in front of them).
 
 
-*TODO: add more information here*
+You can access a member using the `.` operator ("dot operator"). You write the name
+of the *class* (for static members) or *instance* (for instance members) then a dot,
+then the name of the member.
+
+e.g. to get the static member `ourValue` from the class `MyClass`, write 
+`MyClass.ourValue`. Here are some examples writing that to set the value
+in `ourValue`, and to assign the value to a new variable named `something`
+
+```
+MyClass.ourValue = 5;
+int something = MyClass.ourValue;
+```
+
+
+
+*TODO: add more information here (instance member usage examples, etc.)*
 
 ## `static`
 
